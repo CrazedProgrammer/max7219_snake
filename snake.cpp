@@ -55,6 +55,8 @@ void updateSnake() {
   snakeX[0] = newSnakeX;
   snakeY[0] = newSnakeY;
   setPixel(snakeX[0], snakeY[0], true);
+  updateDisplay();
+
   uint8_t delayLength = 200 - snakeLength * 5;
   if (delayLength < 40) delayLength = 40;
   delay(delayLength);
